@@ -9,7 +9,7 @@
  * http://www.opensource.org/licenses/MIT
  */
 
-/* global blueimp, $ */
+/* global $ */
 
 $(function () {
     'use strict';
@@ -27,8 +27,7 @@ $(function () {
         dataType: 'jsonp',
         jsonp: 'jsoncallback'
     }).done(function (result) {
-        var carouselLinks = [],
-            linksContainer = $('#links'),
+        var linksContainer = $('#links'),
             baseUrl;
         // Add the demo images as links with thumbnails to the page:
         $.each(result.photos.photo, function (index, photo) {
